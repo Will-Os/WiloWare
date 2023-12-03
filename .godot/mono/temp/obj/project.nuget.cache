@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ap5FOaltuh7ad+K4smt4V+GaI0deOOB5mZ4WcbSG7CgknUP/H22OyQkQQdoDp90uoj2GIONQP+7sOoEhSgBUuA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Wilo\\Documents\\WiloWare\\WiloWare.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Wilo\\.nuget\\packages\\godot.sourcegenerators\\4.1.3\\godot.sourcegenerators.4.1.3.nupkg.sha512",
+    "C:\\Users\\Wilo\\.nuget\\packages\\godotsharp\\4.1.3\\godotsharp.4.1.3.nupkg.sha512",
+    "C:\\Users\\Wilo\\.nuget\\packages\\godotsharpeditor\\4.1.3\\godotsharpeditor.4.1.3.nupkg.sha512",
+    "C:\\Users\\Wilo\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\Wilo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\Wilo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

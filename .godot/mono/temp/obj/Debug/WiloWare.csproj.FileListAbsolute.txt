@@ -1,0 +1,17 @@
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\bin\Debug\WiloWare.deps.json
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\bin\Debug\WiloWare.runtimeconfig.json
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\bin\Debug\WiloWare.dll
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\bin\Debug\WiloWare.pdb
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.csproj.AssemblyReference.cache
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.AssemblyInfoInputs.cache
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.AssemblyInfo.cs
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.csproj.CoreCompileInputs.cache
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.csproj.CopyComplete
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.dll
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\refint\WiloWare.dll
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.pdb
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.genruntimeconfig.cache
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\ref\WiloWare.dll

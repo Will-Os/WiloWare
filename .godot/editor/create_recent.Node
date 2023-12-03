@@ -1,0 +1,12 @@
+AnimationPlayer
+CSGCombiner3D
+CSGBox3D
+CSGPolygon3D
+CSGCylinder3D
+Label3D
+Label
+CollisionShape3D
+CharacterBody3D
+RigidBody3D
+Camera3D
+DirectionalLight3D

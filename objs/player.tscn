@@ -1,0 +1,119 @@
+[gd_scene load_steps=6 format=3 uid="uid://p5djgajcikk"]
+
+[ext_resource type="Script" path="res://objs/scripts/player.cs" id="1_4dde1"]
+[ext_resource type="Texture2D" uid="uid://bgvgcdc2l4ehb" path="res://addons/kenney_prototype_textures/light/texture_08.png" id="3_067kd"]
+[ext_resource type="Script" path="res://objs/scripts/fps_counter.cs" id="3_nqigd"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p4xun"]
+height = 0.880936
+radius = 0.135325
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqlpg"]
+albedo_texture = ExtResource("3_067kd")
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_4dde1")
+
+[node name="colision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0907662, 0)
+shape = SubResource("CylinderShape3D_p4xun")
+
+[node name="camara" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0.75, 2.45)
+
+[node name="fps_counter" type="Label3D" parent="camara"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.93, 0.515, -0.71)
+pixel_size = 0.001
+modulate = Color(0, 1, 0, 1)
+text = "120FPS"
+outline_size = 8
+horizontal_alignment = 0
+script = ExtResource("3_nqigd")
+
+[node name="modelo" type="CSGCombiner3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+
+[node name="mdl_brazo1" type="CSGCombiner3D" parent="modelo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0119451, 0.194981, 0.261489)
+
+[node name="brazo1" type="CSGBox3D" parent="modelo/mdl_brazo1"]
+transform = Transform3D(0.499999, 0, 0, 0, 0.500001, 0, 0, 0, 0.499999, 0, 0, 0)
+size = Vector3(0.143488, 0.0706971, 0.389011)
+
+[node name="mano1" type="CSGBox3D" parent="modelo/mdl_brazo1"]
+transform = Transform3D(0.499999, 1.49013e-08, 0, -1.49012e-08, 0.500002, 6.84895e-08, 2.04115e-15, -6.84898e-08, 0.5, 0, 0, 0.265872)
+size = Vector3(0.173675, 0.0706971, 0.185327)
+
+[node name="brazo3" type="CSGBox3D" parent="modelo/mdl_brazo1"]
+transform = Transform3D(0.499999, 2.98025e-08, 0, -2.98024e-08, 0.500001, 1.01494e-07, 6.04955e-15, -1.01495e-07, 0.5, 0, 0, 0.154739)
+size = Vector3(0.0975392, 0.0706971, 0.292907)
+
+[node name="mdl_brazo2" type="CSGCombiner3D" parent="modelo"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0119451, 0.194981, -0.252707)
+
+[node name="brazo1" type="CSGBox3D" parent="modelo/mdl_brazo2"]
+transform = Transform3D(0.499999, 0, 0, 0, 0.500001, 0, 0, 0, 0.499999, 0, 0, 0)
+size = Vector3(0.143488, 0.0706971, 0.389011)
+
+[node name="mano1" type="CSGBox3D" parent="modelo/mdl_brazo2"]
+transform = Transform3D(0.499999, 1.49013e-08, 0, -1.49012e-08, 0.500002, 6.84895e-08, 2.04115e-15, -6.84898e-08, 0.5, 0, 0, 0.265872)
+size = Vector3(0.173675, 0.0706971, 0.185327)
+
+[node name="brazo3" type="CSGBox3D" parent="modelo/mdl_brazo2"]
+transform = Transform3D(0.499999, 2.98025e-08, 0, -2.98024e-08, 0.500001, 1.01494e-07, 6.04955e-15, -1.01495e-07, 0.5, 0, 0, 0.154739)
+size = Vector3(0.0975392, 0.0706971, 0.292907)
+
+[node name="mdl_cuerpo" type="CSGCombiner3D" parent="modelo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
+
+[node name="cuerpo" type="CSGPolygon3D" parent="modelo/mdl_cuerpo"]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0.00509178, -0.0380834, 0)
+polygon = PackedVector2Array(0.351871, -0.0805174, -0.00448823, 1.01349, 0.626677, 0.762535)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 6
+material = SubResource("StandardMaterial3D_dqlpg")
+
+[node name="cuerpo2" type="CSGPolygon3D" parent="modelo/mdl_cuerpo"]
+transform = Transform3D(-1.04308e-07, -1.24345e-14, 0.3, 2.62268e-08, -0.3, 0, 0.3, 2.62268e-08, 1.04308e-07, 0.00136142, -0.0340476, 0.00377058)
+polygon = PackedVector2Array(0.384364, -0.208346, 0.27385, 0.48002, 0.560031, 0.226552)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 6
+material = SubResource("StandardMaterial3D_dqlpg")
+
+[node name="cabeza" type="CSGCylinder3D" parent="modelo/mdl_cuerpo"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.338488, 0)
+radius = 0.11886
+height = 0.177284
+smooth_faces = false
+
+[node name="mdl_pierna1" type="CSGCombiner3D" parent="modelo"]
+transform = Transform3D(1.4, 0, 0, 0, 1.1, 0, 0, 0, 1.4, 0.00419055, -0.209948, 0.104225)
+
+[node name="pie1" type="CSGBox3D" parent="modelo/mdl_pierna1"]
+transform = Transform3D(0.999998, 1.86265e-09, 0, 3.35276e-08, 1, 0, 0, 0, 0.999999, 0.0152298, -0.320376, 0)
+size = Vector3(0.121359, 0.0371685, 0.0593211)
+
+[node name="pierna1" type="CSGBox3D" parent="modelo/mdl_pierna1"]
+transform = Transform3D(0.999998, 1.86265e-09, 0, 3.72529e-09, 0.999999, 0, 0, 0, 0.999998, 0, 0, 0)
+size = Vector3(0.0833726, 0.224063, 0.0546465)
+
+[node name="pierna3" type="CSGBox3D" parent="modelo/mdl_pierna1"]
+transform = Transform3D(0.999998, 0, 0, 1.11759e-08, 1, 0, 0, 0, 0.999998, -0.00108788, -0.215432, -0.000701159)
+size = Vector3(0.0580677, 0.202301, 0.0499847)
+
+[node name="mdl_pierna2" type="CSGCombiner3D" parent="modelo"]
+transform = Transform3D(1.4, 0, 0, 0, 1.1, 0, 0, 0, 1.4, 0.00419055, -0.209948, -0.0963283)
+
+[node name="pie1" type="CSGBox3D" parent="modelo/mdl_pierna2"]
+transform = Transform3D(0.999998, 1.86265e-09, 0, 3.35276e-08, 1, 0, 0, 0, 0.999999, 0.0152298, -0.320376, 0)
+size = Vector3(0.121359, 0.0371685, 0.0593211)
+
+[node name="pierna1" type="CSGBox3D" parent="modelo/mdl_pierna2"]
+transform = Transform3D(0.999998, 1.86265e-09, 0, 3.72529e-09, 0.999999, 0, 0, 0, 0.999998, 0, 0, 0)
+size = Vector3(0.0833726, 0.224063, 0.0546465)
+
+[node name="pierna3" type="CSGBox3D" parent="modelo/mdl_pierna2"]
+transform = Transform3D(0.999998, 0, 0, 1.11759e-08, 1, 0, 0, 0, 0.999998, -0.00108788, -0.215432, -0.000701159)
+size = Vector3(0.0580677, 0.202301, 0.0499847)

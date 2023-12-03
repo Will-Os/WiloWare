@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://qlqb32jjjwpn"]
+
+[ext_resource type="Texture2D" uid="uid://cro03k42sdci5" path="res://addons/kenney_prototype_textures/orange/texture_01.png" id="1_vxrrf"]
+[ext_resource type="PackedScene" uid="uid://p5djgajcikk" path="res://objs/player.tscn" id="2_m2epi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ssig"]
+albedo_texture = ExtResource("1_vxrrf")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8q8bl"]
+albedo_texture = ExtResource("1_vxrrf")
+uv1_triplanar = true
+
+[node name="lvl_debug" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 5, 5)
+light_energy = 0.6
+
+[node name="mundo" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="mundo"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0.00100231, -2.38419e-07, 0.241884)
+size = Vector3(12.0173, 0.514579, 1.50947)
+material = SubResource("StandardMaterial3D_6ssig")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="mundo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.89088, 1.03957, 0.247276)
+size = Vector3(0.209261, 1.80931, 1.48243)
+material = SubResource("StandardMaterial3D_8q8bl")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="mundo"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 6.29064, -0.239087, 0.254588)
+size = Vector3(0.217672, 1.80931, 1.48243)
+material = SubResource("StandardMaterial3D_8q8bl")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="mundo"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 10.7866, -0.19934, 0.234556)
+size = Vector3(0.217672, 3.61884, 1.48243)
+material = SubResource("StandardMaterial3D_8q8bl")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="mundo"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 8.09337, 0.151355, 0.234445)
+size = Vector3(0.573885, 1.80931, 1.48243)
+material = SubResource("StandardMaterial3D_8q8bl")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="mundo"]
+transform = Transform3D(0.5, -0.866025, 0, 0.866025, 0.5, 0, 0, 0, 1, 8.63077, 0.417372, 0.256739)
+operation = 2
+size = Vector3(0.514935, 1.1445, 1.58787)
+material = SubResource("StandardMaterial3D_8q8bl")
+
+[node name="player" parent="." instance=ExtResource("2_m2epi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.17527, 0.699122, 0.262354)
