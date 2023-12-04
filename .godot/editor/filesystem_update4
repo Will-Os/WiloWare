@@ -1,4 +1,4 @@
-res://objs/player.tscn
 res://lvl/lvl_debug.tscn
+res://objs/player.tscn
 res://objs/scripts/fps_counter.cs
 res://objs/scripts/player.cs

@@ -15,3 +15,4 @@ C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\refint\WiloWare.dll
 C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.pdb
 C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.genruntimeconfig.cache
 C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\ref\WiloWare.dll
+C:\Users\Wilo\Documents\WiloWare\.godot\mono\temp\obj\Debug\WiloWare.sourcelink.json

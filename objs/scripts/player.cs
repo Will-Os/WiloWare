@@ -14,7 +14,7 @@ public partial class player : CharacterBody3D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		//animationPlayer =  GetNode<AnimationPlayer>("animaciones");
+		animationPlayer =  GetNode<AnimationPlayer>("animaciones");
 		modeloJugador = GetNode<CsgCombiner3D>("modelo");
 	}
 
@@ -23,15 +23,23 @@ public partial class player : CharacterBody3D
 	{
 		if(Input.IsActionPressed("in_derecha")){
 			rotacion.Y = -0.43633187f;
+			if(IsOnFloor()){
+				animationPlayer.Play("correr");
+			}
 		}
-		if(Input.IsActionPressed("in_izquierda")){
+		else if(Input.IsActionPressed("in_izquierda")){
 			rotacion.Y = -2.7052608f;
-		}
-		/*if(movimiento.X != 0){
-			animationPlayer.Play("correr");
-		}else{
+			if(IsOnFloor()){
+				animationPlayer.Play("correr");
+			}
+		}else if(IsOnFloor()){
 			animationPlayer.Play("idle");
-		}*/
+		}
+		
+		if(IsOnFloor() && Input.IsActionPressed("in_salto")){
+			animationPlayer.Play("saltar");
+		}
+
 		modeloJugador.Rotation= rotacion;
 	}
 
