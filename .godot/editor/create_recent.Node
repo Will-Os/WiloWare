@@ -1,11 +1,15 @@
+CollisionShape3D
+Area3D
+CSGBox3D
+Node3D
+StaticBody3D
+CollisionPolygon3D
 AnimationPlayer
 CSGCombiner3D
-CSGBox3D
 CSGPolygon3D
 CSGCylinder3D
 Label3D
 Label
-CollisionShape3D
 CharacterBody3D
 RigidBody3D
 Camera3D
