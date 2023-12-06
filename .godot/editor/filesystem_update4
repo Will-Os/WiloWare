@@ -1,5 +1,0 @@
-res://lvl/lvl_debug.tscn
-res://objs/player.tscn
-res://objs/scripts/area_camara.cs
-res://objs/scripts/fps_counter.cs
-res://objs/scripts/player.cs
