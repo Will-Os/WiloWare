@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701824473
+::res://::1701892293
 icon.svg::CompressedTexture2D::8719435029208799098::1701556096::1701556105::1::::<><>::
 README.md::TextFile::-1::1701643585::0::1::::<><>::
 ::res://addons/::1701556502
@@ -89,11 +89,11 @@ texture_10.png::CompressedTexture2D::3426250239603323126::1701556503::1701556504
 texture_11.png::CompressedTexture2D::8587120919645398154::1701556503::1701556504::1::::<><>::
 texture_12.png::CompressedTexture2D::1332179156464492078::1701556503::1701556504::1::::<><>::
 texture_13.png::CompressedTexture2D::4298706647039401856::1701556503::1701556504::1::::<><>::
-::res://lvl/::1701747494
-lvl_debug.tscn::PackedScene::1146704423966192795::1701747494::0::1::::<><>::uid://cro03k42sdci5::::res://addons/kenney_prototype_textures/orange/texture_01.png<>uid://p5djgajcikk::::res://objs/player.tscn<>res://objs/scripts/area_camara.cs
-::res://objs/::1701747494
-player.tscn::PackedScene::32793015466698270::1701747494::0::1::::<><>::res://objs/scripts/player.cs<>res://objs/scripts/fps_counter.cs
-::res://objs/scripts/::1701736307
-area_camara.cs::CSharpScript::-1::1701741081::0::1::::<><>::
+::res://lvl/::1701892271
+lvl_debug.tscn::PackedScene::1146704423966192795::1701892271::0::1::::<><>::uid://cro03k42sdci5::::res://addons/kenney_prototype_textures/orange/texture_01.png<>uid://p5djgajcikk::::res://objs/player.tscn<>res://objs/scripts/area_camara.cs
+::res://objs/::1701892271
+player.tscn::PackedScene::32793015466698270::1701892271::0::1::::<><>::res://objs/scripts/player.cs<>res://objs/scripts/fps_counter.cs
+::res://objs/scripts/::1701892280
+area_camara.cs::CSharpScript::-1::1701892271::0::1::::<><>::
 fps_counter.cs::CSharpScript::-1::1701575337::0::1::::<><>::
-player.cs::CSharpScript::-1::1701747479::0::1::::<><>::
+player.cs::CSharpScript::-1::1701892271::0::1::::<><>::
