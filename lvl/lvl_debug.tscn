@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://qlqb32jjjwpn"]
+[gd_scene load_steps=9 format=3 uid="uid://qlqb32jjjwpn"]
 
 [ext_resource type="Texture2D" uid="uid://cro03k42sdci5" path="res://addons/kenney_prototype_textures/orange/texture_01.png" id="1_vxrrf"]
 [ext_resource type="PackedScene" uid="uid://p5djgajcikk" path="res://objs/player.tscn" id="2_m2epi"]
@@ -16,8 +16,11 @@ uv1_triplanar = true
 albedo_texture = ExtResource("1_vxrrf")
 uv1_triplanar = true
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6iq3l"]
-size = Vector3(2.02011, 2.20408, 1.47835)
+[sub_resource type="BoxShape3D" id="BoxShape3D_dmbj2"]
+size = Vector3(1.9328, 2.55188, 1.72904)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_romhm"]
+size = Vector3(11.9759, 36.5489, 1.99493)
 
 [node name="lvl_debug" type="Node3D"]
 
@@ -85,12 +88,21 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.211
 size = Vector3(0.963713, 1.17737, 10.3223)
 material = SubResource("StandardMaterial3D_0t6mt")
 
-[node name="player" parent="." instance=ExtResource("2_m2epi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.387, 10, 0.262)
-
 [node name="area_camara" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51384, 1.24741, 0.246428)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.70668, 1.24716, 0)
 script = ExtResource("3_q2o6h")
 
-[node name="colision" type="CollisionShape3D" parent="area_camara"]
-shape = SubResource("BoxShape3D_6iq3l")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="area_camara"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.154549, 0, 0.175729)
+shape = SubResource("BoxShape3D_dmbj2")
+
+[node name="area_camara2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3582, -0.210708, 0)
+script = ExtResource("3_q2o6h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="area_camara2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.45489, 0, 0)
+shape = SubResource("BoxShape3D_romhm")
+
+[node name="player" parent="." instance=ExtResource("2_m2epi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.387, 10, 0.262)

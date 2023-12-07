@@ -35,10 +35,12 @@ public partial class player : CharacterBody3D
 		animationPlayer =  GetNode<AnimationPlayer>("animaciones");
 		modeloJugador = GetNode<CsgCombiner3D>("modelo");
 		camara = GetNode<Camera3D>("camara");
-		Area3D areaCamara = GetParent().GetNode<Area3D>("area_camara");
+		
+		foreach(Area3D areaCamara in GetTree().GetNodesInGroup("colisiones_camara")){
+			areaCamara.AreaEntered += areaCamaraEntrar;
+			areaCamara.AreaExited += areaCamaraSalir;
+		}
 
-		areaCamara.AreaEntered += areaCamaraEntrar;
-		areaCamara.AreaExited += areaCamaraSalir;
 		coordenadasIniciales = Position;
 	}
 
