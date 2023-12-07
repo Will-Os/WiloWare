@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://p5djgajcikk"]
+[gd_scene load_steps=12 format=3 uid="uid://p5djgajcikk"]
 
 [ext_resource type="Script" path="res://objs/scripts/player.cs" id="1_4dde1"]
 [ext_resource type="Script" path="res://objs/scripts/fps_counter.cs" id="3_nqigd"]
@@ -3187,6 +3187,10 @@ _data = {
 "saltar": SubResource("Animation_x3vop")
 }
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_31vrq"]
+radius = 0.128553
+height = 0.913536
+
 [node name="player" type="CharacterBody3D"]
 script = ExtResource("1_4dde1")
 
@@ -3296,3 +3300,9 @@ size = Vector3(0.0580677, 0.202301, 0.0499847)
 libraries = {
 "": SubResource("AnimationLibrary_5lbx4")
 }
+
+[node name="hurtbox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hurtbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0547748, 0)
+shape = SubResource("CapsuleShape3D_31vrq")

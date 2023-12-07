@@ -12,15 +12,32 @@ public partial class player : CharacterBody3D
 	Vector3 coordenadasIniciales;
 	private AnimationPlayer animationPlayer;
 	private CsgCombiner3D modeloJugador;
-	// Called when the node enters the scene tree for the first time.
+	// Funciones
+	private void areaCamaraEntrar(Area3D area){
+		var camara = GetNode<Camera3D>("camara");
+		RemoveChild(camara);
+		camara.Position = Position + new Vector3(0,0.75f,2.45f);
+		GetParent().AddChild(camara);
+	}
+
+	private void areaCamaraSalir(Area3D area){
+		var camara = GetParent().GetNode<Camera3D>("camara");
+		GetParent().RemoveChild(camara);
+		camara.Position = new Vector3(0,0.75f,2.45f);
+		AddChild(camara);
+	}
+	// Funciones Override
 	public override void _Ready()
 	{
 		animationPlayer =  GetNode<AnimationPlayer>("animaciones");
 		modeloJugador = GetNode<CsgCombiner3D>("modelo");
+		Area3D areaCamara = GetParent().GetNode<Area3D>("area_camara");
+
+		areaCamara.AreaEntered += areaCamaraEntrar;
+		areaCamara.AreaExited += areaCamaraSalir;
 		coordenadasIniciales = Position;
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		if(Input.IsActionPressed("in_derecha")){
