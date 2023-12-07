@@ -39,9 +39,9 @@ size = Vector3(0.995437, 4.88971, 1.48243)
 material = SubResource("StandardMaterial3D_8q8bl")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="mundo"]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 6.43149, -0.0939952, 0.254588)
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 6.44443, -0.0939952, 0.254588)
 operation = 2
-size = Vector3(0.537951, 1.46586, 1.15892)
+size = Vector3(0.537951, 1.48741, 1.15892)
 material = SubResource("StandardMaterial3D_8q8bl")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="mundo"]
@@ -89,7 +89,7 @@ material = SubResource("StandardMaterial3D_0t6mt")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.387, 10, 0.262)
 
 [node name="area_camara" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.42195, 1.24741, 0.246428)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51384, 1.24741, 0.246428)
 script = ExtResource("3_q2o6h")
 
 [node name="colision" type="CollisionShape3D" parent="area_camara"]

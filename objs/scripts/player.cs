@@ -5,24 +5,27 @@ public partial class player : CharacterBody3D
 {
 	//Variables base
 	float velocidad = 3f;
+	bool lockCamara = false;
 	const float salto = 1f;
 	const float gravedad = 15f;
 	Vector3 movimiento = new Vector3();
 	Vector3 rotacion = new Vector3(0,-0.43633187f,0);
 	Vector3 coordenadasIniciales;
+	Camera3D camara;
 	private AnimationPlayer animationPlayer;
 	private CsgCombiner3D modeloJugador;
+
 	// Funciones
 	private void areaCamaraEntrar(Area3D area){
-		var camara = GetNode<Camera3D>("camara");
 		RemoveChild(camara);
 		camara.Position = Position + new Vector3(0,0.75f,2.45f);
+		lockCamara = true;
 		GetParent().AddChild(camara);
 	}
 
 	private void areaCamaraSalir(Area3D area){
-		var camara = GetParent().GetNode<Camera3D>("camara");
 		GetParent().RemoveChild(camara);
+		lockCamara = false;
 		camara.Position = new Vector3(0,0.75f,2.45f);
 		AddChild(camara);
 	}
@@ -31,6 +34,7 @@ public partial class player : CharacterBody3D
 	{
 		animationPlayer =  GetNode<AnimationPlayer>("animaciones");
 		modeloJugador = GetNode<CsgCombiner3D>("modelo");
+		camara = GetNode<Camera3D>("camara");
 		Area3D areaCamara = GetParent().GetNode<Area3D>("area_camara");
 
 		areaCamara.AreaEntered += areaCamaraEntrar;
@@ -71,6 +75,9 @@ public partial class player : CharacterBody3D
 			animationPlayer.Play("caer",-1,2);
 		}
 
+		if(lockCamara){
+			camara.Position = new Vector3(camara.Position.X,Position.Y+0.75f,Position.Z+2.45f);
+		}
 		modeloJugador.Rotation= rotacion;
 	}
 
